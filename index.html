@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guillem Mntes - Game Producer Portfolio</title>
+  <title>Guillem Montes - Game Producer Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png" />
 
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
@@ -65,8 +68,6 @@
     header {
       margin-bottom: 3rem;
     }
-
-    /* Profile picture */
     #profile-pic {
       display: block;
       margin: 0 auto 1rem auto;
@@ -76,7 +77,6 @@
       border-radius: 50%;
       border: 3px solid #00bcd4;
     }
-
     section {
       max-width: 900px;
       width: 100%;
@@ -89,14 +89,12 @@
     section:nth-child(2) { animation-delay: 0.3s; }
     section:nth-child(3) { animation-delay: 0.6s; }
     section:nth-child(4) { animation-delay: 0.9s; }
-
     #about p {
       text-align: center;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
     }
-
     #projects .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -132,8 +130,6 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 188, 212, 0.6);
     }
-
-    /* Enlace que envuelve todo el proyecto para que sea clicable */
     .project-card a.project-link {
       display: block;
       color: inherit;
@@ -144,7 +140,6 @@
     .project-card a.project-link:hover {
       color: #ff9800;
     }
-
     #contact {
       text-align: center;
       margin-top: 3rem;
@@ -165,7 +160,6 @@
     #contact a:hover {
       color: #ff9800;
     }
-
     #side-contact {
       position: fixed;
       top: 50%;
@@ -180,18 +174,15 @@
       box-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       z-index: 1000;
     }
-
     #side-contact a {
       color: #00bcd4;
       font-size: 1.8rem;
       margin: 0.5rem 0;
       transition: color 0.3s ease;
     }
-
     #side-contact a:hover {
       color: #ff9800;
     }
-
     footer {
       margin-top: auto;
       padding: 1rem 0;
@@ -204,14 +195,17 @@
       border-top: 1px solid #00bcd4;
       user-select: none;
     }
-
+    footer img {
+      margin-top: 0.5rem;
+      width: 40px;
+      height: auto;
+    }
     @keyframes fadeInUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
     @media (max-width: 500px) {
       h1 {
         font-size: 2.2rem;
@@ -262,7 +256,6 @@
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
-
       <div class="project-card">
         <a href="https://burned-games.github.io/" target="_blank" class="project-link" rel="noopener noreferrer">
           <h3>Warhammer 40,000: The Last Marine</h3>
@@ -270,7 +263,6 @@
           <img class="project-image" src="w40k_tlm.png" alt="Warhammer 40,000: The Last Marine" />
         </a>
       </div>
-
       <div class="project-card">
         <a href="https://southwest-studios.github.io/Suregs-Mask/" target="_blank" class="project-link" rel="noopener noreferrer">
           <h3>Süreg's Mask</h3>
@@ -278,15 +270,13 @@
           <img class="project-image" src="suregsmask.png" alt="Süreg's Mask" />
         </a>
       </div>
-
-<div class="project-card">
+      <div class="project-card">
         <a href="https://aitramkg.itch.io/viktor-stoneheart" target="_blank" class="project-link" rel="noopener noreferrer">
           <h3>Viktor Stonehart</h3>
           <p>A psychological horror game I made in a Game Jam in a team of 4 people. I was the producer.</p>
           <img class="project-image" src="viktorstonehart.png" alt="Viktor Stonehart" />
         </a>
       </div>
-
       <div class="project-card">
         <a href="https://github.com/AlejandroIR/Hired-or-Fired" target="_blank" class="project-link" rel="noopener noreferrer">
           <h3>Hired or Fired</h3>
@@ -294,21 +284,23 @@
           <img class="project-image" src="hiredorfired.png" alt="Hired or Fired" />
         </a>
       </div>
-
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Feel free to reach me by email or on social media. guillem2525@gmail.com</p>
+    <p>Feel free to reach me by email or on social media.<br />guillem2525@gmail.com</p>
     <a href="CV_GuillemMontes.pdf" target="_blank" title="Curriculum"><i class="fas fa-file-alt"></i></a>
     <a href="https://www.linkedin.com/in/guillem-montes-recasens-2488602a7/?trk=opento_sprofile_goalscard" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a href="https://github.com/Guillem257" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
   </section>
 
+  <!-- PIE DE PÁGINA -->
   <footer>
-    Guillem Montes © 2024
+    Guillem Montes © 2024<br />
+    <img src="logo.png" alt="Logo" />
   </footer>
+
 </body>
 </html>
