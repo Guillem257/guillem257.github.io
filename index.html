@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guillem Montes - Game Producer Portfolio</title>
+  <title>Guillem Mntes - Game Producer Portfolio</title>
 
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
@@ -109,10 +109,6 @@
       padding: 1.5rem;
       box-shadow: 0 4px 8px rgba(0,0,0,0.4);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
     }
     .project-card:hover {
       transform: translateY(-5px);
@@ -128,7 +124,6 @@
       font-size: 0.95rem;
       line-height: 1.3;
       margin-bottom: 1rem;
-      flex-grow: 1;
     }
     .project-image {
       width: 100%;
@@ -136,10 +131,9 @@
       object-fit: contain;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 188, 212, 0.6);
-      margin-top: auto;
     }
 
-    /* El link que hace clicable todo el card */
+    /* Enlace que envuelve todo el proyecto para que sea clicable */
     .project-card a.project-link {
       display: block;
       color: inherit;
@@ -248,23 +242,29 @@
     <a href="https://github.com/Guillem257" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
   </div>
 
+  <!-- ENCABEZADO -->
   <header>
-    <h1>Guillem Montes Recasens</h1>
-    <img id="profile-pic" src="profile.jpg" alt="Profile Picture of Guillem Montes" />
-    <p>Game Producer focused on immersive experiences, teamwork and quality.</p>
+    <img id="profile-pic" src="foto.jpeg" alt="Foto de Guillem Montes" />
+    <h1>Guillem Montes</h1>
+    <p style="font-weight:600; font-size:1.3rem; color:#ff9800; margin-bottom:0.8rem;">Game Producer</p>
+    <p>I have been a video game lover since my childhood. When I discovered I could study and dedicate myself to it, I haven't stopped pursuing it.</p>
   </header>
 
+  <!-- SOBRE MÍ -->
   <section id="about">
-    <h2>About me</h2>
-    <p>Hello! I'm Guillem, a game producer passionate about managing teams and delivering memorable experiences. Thanks for stopping by!</p>
+    <h2>About Me</h2>
+    <p>
+      I started by doing a higher-level course in 3D animation and I am currently finishing my degree in video game development. When I began, what I enjoyed most was designing and animating, until I discovered the producer role. Since I was a child, I have loved organizing and leading work teams, and in all my subject projects or game jams, I have taken on this role. The project where I worked the most as a producer was Warhammer 40,000: The Last Marine, where I was the producer of a team of 40 people.
+    </p>
   </section>
 
+  <!-- PROYECTOS -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
 
       <div class="project-card">
-        <a href="https://southwest-studios.github.io/Warhammer-40k-The-Last-Marine/" target="_blank" class="project-link" rel="noopener noreferrer">
+        <a href="https://burned-games.github.io/" target="_blank" class="project-link" rel="noopener noreferrer">
           <h3>Warhammer 40,000: The Last Marine</h3>
           <p>Project where I was producer of a team of 40 people developing a game.</p>
           <img class="project-image" src="w40k_tlm.png" alt="Warhammer 40,000: The Last Marine" />
