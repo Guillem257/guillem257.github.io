@@ -1,23 +1,111 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio de El Patillas</title>
+    <title>El Patillas – Game Producer</title>
     <style>
         body {
-            font-family: sans-serif;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #222;
             text-align: center;
-            padding: 50px;
-            background-color: #f0f0f0;
+            padding: 60px 20px 30px;
         }
-        h1 {
-            color: #333;
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
         }
+
+        header h2 {
+            margin: 10px 0 0;
+            font-weight: 300;
+            color: #aaa;
+        }
+
+        .section {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .section h3 {
+            border-bottom: 2px solid #555;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
     </style>
 </head>
 <body>
-    <h1>¡Hola! Soy El Patillas</h1>
-    <p>Bienvenido a mi portafolio web.</p>
+
+    <header>
+        <h1>El Patillas</h1>
+        <h2>Game Producer</h2>
+        <p style="max-width: 600px; margin: 20px auto 0;">
+            I am a fan of programming and art, therefore, my biggest passion is video games.
+            I've been practically all my life in this world, learning to program by myself since I was 11.
+        </p>
+    </header>
+
+    <section class="section">
+        <h3>About Me</h3>
+        <p>
+            I love telling stories through interactive experiences. My background combines creativity with
+            organization, and I'm passionate about designing gameplay, coordinating teams, and shipping memorable titles.
+        </p>
+    </section>
+
+    <section class="section">
+        <h3>Projects</h3>
+        <div class="projects-grid">
+            <div class="project-card">Project 1</div>
+            <div class="project-card">Project 2</div>
+            <div class="project-card">Project 3</div>
+            <div class="project-card">Project 4</div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:elpatillas@example.com">elpatillas@example.com</a></p>
+        <p>GitHub: <a href="https://github.com/elpatillas" target="_blank">github.com/elpatillas</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/elpatillas" target="_blank">linkedin.com/in/elpatillas</a></p>
+    </section>
+
 </body>
 </html>
