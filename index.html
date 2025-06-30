@@ -82,7 +82,7 @@
 
     /* About me */
     #about p {
-      text-align: left;
+      text-align: center; /* centrado */
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
@@ -91,7 +91,8 @@
     /* Projects grid */
     #projects .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
+      grid-template-rows: repeat(2, auto);   /* 2 filas */
       gap: 1.5rem;
     }
     .project-card {
@@ -131,6 +132,37 @@
     #contact a:hover {
       color: #ff9800;
     }
+    /* Ocultamos los iconos originales del contacto porque añadimos lateral fijo */
+    #contact div {
+      display: none;
+    }
+
+    /* Contactos laterales */
+    #side-contact {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      background: #222;
+      padding: 0.5rem;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      z-index: 1000;
+    }
+
+    #side-contact a {
+      color: #00bcd4;
+      font-size: 1.8rem;
+      margin: 0.5rem 0;
+      transition: color 0.3s ease;
+    }
+
+    #side-contact a:hover {
+      color: #ff9800;
+    }
 
     /* Animations */
     @keyframes fadeInUp {
@@ -152,13 +184,27 @@
       .project-card {
         padding: 1rem;
       }
+      #projects .grid {
+        grid-template-columns: 1fr; /* En móvil, 1 columna */
+        grid-template-rows: auto;
+      }
+      #side-contact {
+        display: none; /* Ocultamos lateral en móvil para no tapar contenido */
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Contactos laterales -->
+  <div id="side-contact">
+    <a href="mailto:guillem2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/Guillem257" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/guillem-montes-recasens-2488602a7/?trk=opento_sprofile_goalscard" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
+
   <header>
-    <h1>Guillem</h1>
+    <h1>Guillem Montes</h1>
     <p style="font-weight:600; font-size:1.3rem; color:#ff9800; margin-bottom:0.8rem;">Game Producer</p>
     <p>I have been a video game lover since my childhood. When I discovered I could study and dedicate myself to it, I haven't stopped pursuing it.</p>
   </header>
@@ -196,6 +242,7 @@
     <h2>Contact Me</h2>
     <p>Feel free to reach out!</p>
     <div>
+      <!-- Estos iconos se ocultan porque usamos los laterales fijos -->
       <a href="mailto:guillem2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/Guillem257" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/guillem-montes-recasens-2488602a7/?trk=opento_sprofile_goalscard" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
