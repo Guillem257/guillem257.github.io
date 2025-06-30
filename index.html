@@ -1,115 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Patillas – Game Producer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111;
-            color: #f0f0f0;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guillem - Game Producer Portfolio</title>
+  
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 
-        header {
-            background-color: #222;
-            text-align: center;
-            padding: 60px 20px 30px;
-        }
+  <!-- FontAwesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-        }
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
+    body {
+      background-color: #111;
+      color: #eee;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff9800;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 3rem;
+      margin-bottom: 0.2rem;
+      color: #00bcd4;
+      text-align: center;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00bcd4;
+      padding-bottom: 0.3rem;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    p {
+      max-width: 600px;
+      margin: 0 auto 2rem auto;
+      font-weight: 300;
+      font-size: 1.1rem;
+      text-align: center;
+      color: #ccc;
+    }
+    header {
+      margin-bottom: 3rem;
+    }
+    /* Sections */
+    section {
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 4rem;
+      padding: 0 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    section:nth-child(2) { animation-delay: 0.3s; }
+    section:nth-child(3) { animation-delay: 0.6s; }
+    section:nth-child(4) { animation-delay: 0.9s; }
 
-        header h2 {
-            margin: 10px 0 0;
-            font-weight: 300;
-            color: #aaa;
-        }
+    /* About me */
+    #about p {
+      text-align: left;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        .section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+    /* Projects grid */
+    #projects .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 1.5rem;
+    }
+    .project-card {
+      background: #222;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px #00bcd4aa;
+    }
+    .project-card h3 {
+      margin-bottom: 0.5rem;
+      color: #00bcd4;
+    }
+    .project-card p {
+      font-weight: 300;
+      color: #aaa;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
 
-        .section h3 {
-            border-bottom: 2px solid #555;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+    /* Contact */
+    #contact {
+      text-align: center;
+    }
+    #contact a {
+      display: inline-block;
+      margin: 0 0.7rem;
+      font-size: 2rem;
+      color: #00bcd4;
+      transition: color 0.3s ease;
+    }
+    #contact a:hover {
+      color: #ff9800;
+    }
 
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        .project-card {
-            background-color: #222;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            border: 1px solid #333;
-        }
-
-        .contact {
-            text-align: center;
-        }
-
-        a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-    </style>
+    /* Responsive tweaks */
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+        max-width: 100%;
+      }
+      .project-card {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>El Patillas</h1>
-        <h2>Game Producer</h2>
-        <p style="max-width: 600px; margin: 20px auto 0;">
-            I am a fan of programming and art, therefore, my biggest passion is video games.
-            I've been practically all my life in this world, learning to program by myself since I was 11.
-        </p>
-    </header>
+  <header>
+    <h1>Guillem</h1>
+    <p style="font-weight:600; font-size:1.3rem; color:#ff9800; margin-bottom:0.8rem;">Producer de videojuegos</p>
+    <p>I am a fan of programming and art, therefore, my biggest passion is video games. I've been practically all my life in this world, learning to program by myself since I was 11.</p>
+  </header>
 
-    <section class="section">
-        <h3>About Me</h3>
-        <p>
-            I love telling stories through interactive experiences. My background combines creativity with
-            organization, and I'm passionate about designing gameplay, coordinating teams, and shipping memorable titles.
-        </p>
-    </section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Passionate about creating amazing gaming experiences, I combine creativity and technical skills to deliver quality projects on time. I enjoy collaborating with diverse teams and always strive to learn new things.
+    </p>
+  </section>
 
-    <section class="section">
-        <h3>Projects</h3>
-        <div class="projects-grid">
-            <div class="project-card">Project 1</div>
-            <div class="project-card">Project 2</div>
-            <div class="project-card">Project 3</div>
-            <div class="project-card">Project 4</div>
-        </div>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="project-card">
+        <h3>Project One</h3>
+        <p>Brief description of project one goes here. Maybe a game, tool, or demo.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Two</h3>
+        <p>A little info about your second project. What technologies or skills you used.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Three</h3>
+        <p>Details about the third project, challenges and outcomes.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project Four</h3>
+        <p>Description for the last project. Could be a game jam or personal work.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="section contact">
-        <h3>Contact Me</h3>
-        <p>Email: <a href="mailto:elpatillas@example.com">elpatillas@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/elpatillas" target="_blank">github.com/elpatillas</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/elpatillas" target="_blank">linkedin.com/in/elpatillas</a></p>
-    </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out!</p>
+    <div>
+      <a href="mailto:tuemail@example.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Guillem257" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/tu-perfil" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
 
 </body>
 </html>
-
-
-
-
