@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guillem Mntes - Game Producer Portfolio</title>
+  <title>Guillem Montes - Game Producer Portfolio</title>
 
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome 6 -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
     * {
@@ -102,8 +102,6 @@
       color: #00bcd4;
       font-size: 1rem;
       margin-bottom: 2rem;
-      /* Removed link style */
-      cursor: default;
     }
 
     #projects .grid {
@@ -127,14 +125,6 @@
       margin-bottom: 0.5rem;
       color: #00bcd4;
     }
-    .project-card h3 a {
-      color: #00bcd4;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .project-card h3 a:hover {
-      color: #ff9800;
-    }
     .project-card p {
       font-weight: 300;
       color: #aaa;
@@ -148,6 +138,18 @@
       object-fit: contain;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0, 188, 212, 0.6);
+    }
+
+    /* Enlace que envuelve todo el proyecto para que sea clicable */
+    .project-card a.project-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      height: 100%;
+      width: 100%;
+    }
+    .project-card a.project-link:hover {
+      color: #ff9800;
     }
 
     #contact {
@@ -248,42 +250,54 @@
     <p>
       I started by doing a higher-level course in 3D animation and I am currently finishing my degree in video game development. When I began, what I enjoyed most was designing and animating, until I discovered the producer role. Since I was a child, I have loved organizing and leading work teams, and in all my subject projects or game jams, I have taken on this role. The project where I worked the most as a producer was Warhammer 40,000: The Last Marine, where I was the producer of a team of 40 people.
     </p>
-    <p id="email-text">Email: guillem2525 [at] gmail [dot] com</p>
+    <p id="email-text">Contact me: <a href="mailto:guillem.montes.rec@gmail.com">guillem.montes.rec@gmail.com</a></p>
   </section>
 
   <!-- PROYECTOS -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
+
       <div class="project-card">
-        <h3><a href="#" target="_blank" rel="noopener noreferrer">Warhammer 40,000: The Last Marine</a></h3>
-        <p>Project where I was producer of a team of 40 people developing a game.</p>
-        <img class="project-image" src="w40k_tlm.png" alt="Warhammer 40,000: The Last Marine" />
+        <a href="https://burned-games.github.io/" target="_blank" class="project-link" rel="noopener noreferrer">
+          <h3>Warhammer 40,000: The Last Marine</h3>
+          <p>Project where I was producer of a team of 40 people developing a game.</p>
+          <img class="project-image" src="w40k_tlm.png" alt="Warhammer 40,000: The Last Marine" />
+        </a>
       </div>
+
       <div class="project-card">
-        <h3><a href="#" target="_blank" rel="noopener noreferrer">Süreg's Mask</a></h3>
-        <p>A project focused on creating a unique mask with advanced design techniques.</p>
-        <img class="project-image" src="suregsmask.png" alt="Suregsmask Project" />
+        <a href="https://southwest-studios.github.io/Suregs-Mask/" target="_blank" class="project-link" rel="noopener noreferrer">
+          <h3>Süreg's Mask</h3>
+          <p>Game made in C# for the university, based on a story by Laura Tarragó. I was the producer.</p>
+          <img class="project-image" src="Suregs-Mask.png" alt="Süreg's Mask" />
+        </a>
       </div>
+
       <div class="project-card">
-        <h3><a href="#" target="_blank" rel="noopener noreferrer">Viktor Stonehart</a></h3>
-        <p>A psychological horror game created during a Game Jam, focusing on atmosphere and storytelling.</p>
-        <img class="project-image" src="viktorstonehart.png" alt="Viktor Stonehart Project" />
+        <a href="https://aitramkg.itch.io/viktor-stoneheart" target="_blank" class="project-link" rel="noopener noreferrer">
+          <h3>Viktor Stonehart</h3>
+          <p>A psychological horror game I made in a Game Jam in a team of 4 people. I was the producer.</p>
+          <img class="project-image" src="viktor_stoneheart.png" alt="Viktor Stonehart" />
+        </a>
       </div>
+
       <div class="project-card">
-        <h3><a href="#" target="_blank" rel="noopener noreferrer">Hired or Fired</a></h3>
-        <p>A VR game where you play as a crime boss deciding who to hire or eliminate.</p>
-        <img class="project-image" src="hiredorfired.png" alt="Hired or Fired Project" />
+        <a href="https://github.com/AlejandroIR/Hired-or-Fired" target="_blank" class="project-link" rel="noopener noreferrer">
+          <h3>Hired or Fired</h3>
+          <p>A VR game where you are the boss of a criminal organization, interrogating characters and deciding whom to hire or kill.</p>
+          <img class="project-image" src="hired_fired.png" alt="Hired or Fired" />
+        </a>
       </div>
+
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section id="contact">
-    <p>Feel free to reach out! <br />
-      guillem2525 [at] gmail [dot] com
-    </p>
-    <a href="CV_GuillemMontes.pdf" target="_blank" title="Curriculum"><i class="fas fa-file-alt"></i></a>
+    <h2>Contact</h2>
+    <p>Feel free to reach me by email or on social media.</p>
+    <a href="mailto:guillem2525@gmail.com" title="Email me"><i class="fas fa-envelope"></i></a>
     <a href="https://www.linkedin.com/in/guillem-montes-recasens-2488602a7/?trk=opento_sprofile_goalscard" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a href="https://github.com/Guillem257" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
   </section>
