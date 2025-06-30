@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guillem Mntes- Game Producer Portfolio</title>
+  <title>Guillem Montes- Game Producer Portfolio</title>
   
   <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
@@ -82,17 +82,24 @@
 
     /* About me */
     #about p {
-      text-align: center; /* centrado */
+      text-align: center;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+    }
+    #about .email-text {
+      font-weight: 600;
+      color: #00bcd4;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      user-select: text;
     }
 
     /* Projects grid */
     #projects .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 columnas fijas */
-      grid-template-rows: repeat(2, auto);   /* 2 filas */
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
       gap: 1.5rem;
     }
     .project-card {
@@ -181,11 +188,11 @@
         padding: 1rem;
       }
       #projects .grid {
-        grid-template-columns: 1fr; /* En móvil, 1 columna */
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
       }
       #side-contact {
-        display: none; /* Ocultamos lateral en móvil para no tapar contenido */
+        display: none;
       }
     }
   </style>
@@ -194,9 +201,9 @@
 
   <!-- Contactos laterales -->
   <div id="side-contact">
-    <a href="mailto:guillem2525@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-    <a href="https://github.com/Guillem257" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://yourwebsite.com/cv.pdf" target="_blank" rel="noopener" title="Curriculum"><i class="fas fa-file-alt"></i></a>
     <a href="https://www.linkedin.com/in/guillem-montes-recasens-2488602a7/?trk=opento_sprofile_goalscard" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://github.com/Guillem257" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
   </div>
 
   <header>
@@ -210,6 +217,7 @@
     <p>
       I started by doing a higher-level course in 3D animation and I am currently finishing my degree in video game development. When I began, what I enjoyed most was designing and animating, until I discovered the producer role. Since I was a child, I have loved organizing and leading work teams, and in all my subject projects or game jams, I have taken on this role. The project where I worked the most as a producer was Warhammer 40,000: The Last Marine, where I was the producer of a team of 40 people.
     </p>
+    <p class="email-text">guillem2525@gmail.com</p>
   </section>
 
   <section id="projects">
