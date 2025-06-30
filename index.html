@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Guillem Montes - Game Producer Portfolio</title>
+  <title>Guillem Mntes - Game Producer Portfolio</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Poppins -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome (funcional) -->
+  <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-/+o9jlrjTtZB8U+Z9KZt9RKNkTvn2ebc7F2GJhWoBlCBKvl+rceVVvUeEnkSOBKNT/60D3ey1oz1scI1X2ZBhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+    }
     body {
       background-color: #111;
       color: #eee;
@@ -30,7 +33,9 @@
       text-decoration: none;
       transition: color 0.3s ease;
     }
-    a:hover { color: #ff9800; }
+    a:hover {
+      color: #ff9800;
+    }
     h1 {
       font-weight: 600;
       font-size: 3rem;
@@ -57,8 +62,11 @@
       text-align: center;
       color: #ccc;
     }
-    header { margin-bottom: 3rem; }
+    header {
+      margin-bottom: 3rem;
+    }
 
+    /* Profile picture */
     #profile-pic {
       display: block;
       margin: 0 auto 1rem auto;
@@ -82,6 +90,12 @@
     section:nth-child(3) { animation-delay: 0.6s; }
     section:nth-child(4) { animation-delay: 0.9s; }
 
+    #about p {
+      text-align: center;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     #about #email-text {
       margin-top: -1rem;
       font-weight: 600;
@@ -93,6 +107,7 @@
     #projects .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
       gap: 1.5rem;
     }
     .project-card {
@@ -127,6 +142,7 @@
 
     #contact {
       text-align: center;
+      margin-top: 3rem;
     }
     #contact p {
       font-weight: 600;
@@ -141,7 +157,9 @@
       color: #00bcd4;
       transition: color 0.3s ease;
     }
-    #contact a:hover { color: #ff9800; }
+    #contact a:hover {
+      color: #ff9800;
+    }
 
     #side-contact {
       position: fixed;
@@ -157,33 +175,56 @@
       box-shadow: 2px 2px 8px rgba(0,0,0,0.7);
       z-index: 1000;
     }
+
     #side-contact a {
       color: #00bcd4;
       font-size: 1.8rem;
       margin: 0.5rem 0;
       transition: color 0.3s ease;
     }
-    #side-contact a:hover { color: #ff9800; }
+
+    #side-contact a:hover {
+      color: #ff9800;
+    }
 
     @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @media (max-width: 500px) {
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.6rem; max-width: 100%; }
-      .project-card { padding: 1rem; }
-      #projects .grid { grid-template-columns: 1fr; }
-      #side-contact { display: none; }
+      h1 {
+        font-size: 2.2rem;
+      }
+      h2 {
+        font-size: 1.6rem;
+        max-width: 100%;
+      }
+      .project-card {
+        padding: 1rem;
+      }
+      #projects .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      #side-contact {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
+
+  <!-- ICONOS LATERALES -->
   <div id="side-contact">
     <a href="CV_GuillemMontes.pdf" target="_blank" title="Curriculum"><i class="fas fa-file-alt"></i></a>
     <a href="https://www.linkedin.com/in/guillem-montes-recasens-2488602a7/?trk=opento_sprofile_goalscard" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a href="https://github.com/Guillem257" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
   </div>
 
+  <!-- ENCABEZADO -->
   <header>
     <img id="profile-pic" src="foto.jpeg" alt="Foto de Guillem Montes" />
     <h1>Guillem Montes</h1>
@@ -191,6 +232,7 @@
     <p>I have been a video game lover since my childhood. When I discovered I could study and dedicate myself to it, I haven't stopped pursuing it.</p>
   </header>
 
+  <!-- SOBRE MÍ -->
   <section id="about">
     <h2>About Me</h2>
     <p>
@@ -199,6 +241,7 @@
     <p id="email-text">Email: <a href="mailto:guillem2525@gmail.com">guillem2525@gmail.com</a></p>
   </section>
 
+  <!-- PROYECTOS -->
   <section id="projects">
     <h2>Projects</h2>
     <div class="grid">
@@ -225,11 +268,15 @@
     </div>
   </section>
 
+  <!-- CONTACTO -->
   <section id="contact">
-    <p>Feel free to reach out! <br /> <a href="mailto:guillem2525@gmail.com">guillem2525@gmail.com</a></p>
+    <p>Feel free to reach out! <br />
+      <a href="mailto:guillem2525@gmail.com">guillem2525@gmail.com</a>
+    </p>
     <a href="CV_GuillemMontes.pdf" target="_blank" title="Curriculum"><i class="fas fa-file-alt"></i></a>
     <a href="https://www.linkedin.com/in/guillem-montes-recasens-2488602a7/?trk=opento_sprofile_goalscard" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     <a href="https://github.com/Guillem257" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
   </section>
+
 </body>
 </html>
